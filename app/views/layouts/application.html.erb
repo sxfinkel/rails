@@ -20,26 +20,23 @@
         <span class="icon-bar"></span>
       </button>
       
-      <a class="navbar-brand" href="/">
+      <%= link_to root_path, class: "navbar-brand" do %>
       <i class="fa fa-group"></i>
       DevMatch
-</a>     <!--  <a href="/" class="navbar-brand"><i class="fa fa-group"></i> Dev Match</a> -->
+      <% end %>
+     <!--  <a href="/" class="navbar-brand"><i class="fa fa-group"></i> Dev Match</a> -->
       
     </div>
     <div class="collapse navbar-collapse" id="main-nav-collapse">
       <ul class="nav navbar-nav navbar-right">
         <li><%= link_to "About", about_path %></li>
-        <!--<li><a href="/contacts/new">Contact Us</a></li>-->
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
     
    
-     <div class="home-callout text-center container-fluid">
-  <h1>Welcome to Dev Match</h1>
-  <h3>A membership site where entrepreneurs can meet developers.</h3>
-</div>
+     <%= yield %>
    
   </body>
 </html>
